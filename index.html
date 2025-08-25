@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Öğün ve Resim Yükleme Formu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Öğün Bilgisi ve Resim Yükle</h1>
+      <form id="mealForm">
+        <div class="form-group">
+          <label>Öğün Seçimi:</label>
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              id="breakfast"
+              name="meal"
+              value="Kahvaltı"
+            />
+            <label for="breakfast">Kahvaltı</label>
+
+            <input type="checkbox" id="lunch" name="meal" value="Öğle Yemeği" />
+            <label for="lunch">Öğle Yemeği</label>
+
+            <input
+              type="checkbox"
+              id="dinner"
+              name="meal"
+              value="Akşam Yemeği"
+            />
+            <label for="dinner">Akşam Yemeği</label>
+
+            <input type="checkbox" id="snack" name="meal" value="Ara Öğün" />
+            <label for="snack">Ara Öğün</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="mealName">Öğün Adı (İsteğe Bağlı):</label>
+          <input
+            type="text"
+            id="mealName"
+            name="mealName"
+            placeholder="Örn: Ev Yapımı Pizza, Meyve Tabağı"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="mealImage">Yemek Resmi Ekle:</label>
+          <input type="file" id="mealImage" name="mealImage" accept="image/*" />
+        </div>
+
+        <button type="submit">Gönder</button>
+
+        <div id="message" class="message"></div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
